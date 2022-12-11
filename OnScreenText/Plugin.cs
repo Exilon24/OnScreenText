@@ -1,4 +1,6 @@
-﻿using Exiled.Events.EventArgs;
+﻿using System;
+using System.Linq;
+using Exiled.Events.EventArgs;
 
 namespace OnScreenText
 {
@@ -18,7 +20,7 @@ namespace OnScreenText
 
         private void PlayerOnVerified(VerifiedEventArgs ev)
         {
-            ev.Player.ShowHint($"\n\n\n\n\n\n\n\n\n\n\n\n\n{Config.Title}\n{Config.Text}", 2400f);
+            ev.Player.ShowHint($"{String.Concat(Enumerable.Repeat("\n", Config.NewLines))}{Config.Title}\n{Config.Text}", 2400f);
         }
     }
 }
