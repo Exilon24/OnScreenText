@@ -13,7 +13,9 @@
         public string Text { get; set; } = "Welcome to my server!";
         
         [Description("How many lines down should the hint appear.")]
-
         public int NewLines { get; set; } = 14;
+
+        [Description("How much time should each refresh take")]
+        public float RefreshRate { get; set; } = 10f;
     }
 }
